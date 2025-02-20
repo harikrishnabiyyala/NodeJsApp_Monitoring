@@ -14,6 +14,7 @@ services:
     image: prom/prometheus
     container_name: prometheus
     volumes:
+      - prometheus-data:/prometheus
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
@@ -24,6 +25,8 @@ services:
     ports:
       - "3100:3100"
     command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - loki-data:/loki
 
   grafana:
     image: grafana/grafana
@@ -33,3 +36,10 @@ services:
     depends_on:
       - prometheus
       - loki
+    volumes:
+      - grafana-data:/var/lib/grafana
+
+volumes:
+  prometheus-data:
+  loki-data:
+  grafana-data:
