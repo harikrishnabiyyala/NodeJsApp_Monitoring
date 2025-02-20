@@ -100,4 +100,14 @@ or more violently:
 kill -9 $(lsof -t -i:8080)
 
 
+Demo screeshots 
+
+![1](./images/1.png)
+
+![2](./images/2.png)
+
+
+![3](./images/3.png)
+
+
 Ref Video : https://youtu.be/ddZjhv66o_o?si=ZMah2HCNdGQIQNYj
