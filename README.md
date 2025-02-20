@@ -86,6 +86,8 @@ go to the connectiosn and add loki data source there
 url : http://loki:3100 
 
 
+create a new panel and select the table view and filter log level as info and error and you can view them.
+
 
 To list any process listening to the port 8080:
 
